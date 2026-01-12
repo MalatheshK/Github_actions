@@ -1,0 +1,15 @@
+name: Testing
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+    steps:
+      name : Print_env
+      run : |
+        echo "Hello World"
+        echo "This my first yaml workflow script"
