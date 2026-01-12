@@ -1,6 +1,6 @@
 name: Testing_workflow
 
-on: [push]
+on: [push, pull]
 
 jobs:
   build:
@@ -20,3 +20,6 @@ jobs:
         echo "Actor: $GITHUB_ACTOR"
         echo "Event: $GITHUB_EVENT_NAME"
         echo "Runner OS: $RUNNER_OS"
+    - name : print_env
+      run : |
+        echo "This is second step"
